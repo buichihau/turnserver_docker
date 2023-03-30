@@ -1,0 +1,10 @@
+version: '2.2'
+services:
+    turnserver:
+        image: turnserver:1.0
+        restart: always
+        volumes:
+          - ./data/turnserver.conf:/etc/turnserver.conf
+          - /etc/localtime:/etc/localtime:ro 
+        network_mode: "host"
+
